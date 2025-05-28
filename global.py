@@ -4,6 +4,7 @@ def menu(): # Menu principal da aplicação
         print("1 - Guia de Sobrevivência para Enchentes")
         print("2 - Quiz: Você sobreviveria a uma inundação?")
         print("3 - Consultar ocorrências de enchentes por região")
+        print("4 - Registrar e consultar ocorrências de Enchente")
         print("0 - Sair")
 
         opcao = input("Escolha uma opção: ")
@@ -14,6 +15,8 @@ def menu(): # Menu principal da aplicação
             quiz()
         elif opcao == "3":
             consulta_regiao()
+        elif opcao == "4":
+            registrar_enchente()    
         elif opcao == "0":
             print("Saindo... Até a próxima!")
             break
@@ -342,6 +345,41 @@ def consulta_estado_centrooeste():
             print("Opção inválida.")
 
         input("\nPressione Enter para continuar...")
+
+
+
+registros_enchentes = []
+
+def registrar_enchente():
+    while True:
+        print("\n-- REGISTROS DE ENCHENTES --")
+        print("1 - Adicionar novo registro")
+        print("2 - Listar todos os registros")
+        print("0 - Voltar")
+        opcao = input("Escolha: ")
+
+        if opcao == "1":
+            estado = input("Digite o estado (sigla): ").strip().upper()
+            cidade = input("Digite a cidade: ").strip().title()
+            data = input("Digite a data (DD/MM/AAAA): ").strip()
+            if estado and cidade and data:
+                registros_enchentes.append([estado, cidade, data])
+                print("Registro adicionado com sucesso!")
+            else:
+                print("Todos os campos são obrigatórios.")
+
+        elif opcao == "2":
+            if registros_enchentes:
+                print("\n--- REGISTROS DE ENCHENTES ---")
+                for i, registro in enumerate(registros_enchentes, start=1):
+                    print(f"{i}. Estado: {registro[0]} | Cidade: {registro[1]} | Data: {registro[2]}")
+            else:
+                print("Nenhum registro encontrado.")
+
+        elif opcao == "0":
+            break
+        else:
+            print("Opção inválida.")
 
     
 # Iniciar o sistema
