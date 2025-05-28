@@ -41,7 +41,6 @@ Consulta de porcentagem de enchentes por região/estado: Perguntar ao usuário q
 Outra opção para o Consulta: Quando a região for escolhida e exibida sua porcentagem, perguntar se deseja ver as porcentagens dos estados, se sim, mostrar todos os estados daquela região e seus respectivos dados
 a diferença é que nessa opção todos os estados são exibidos, ao invés do usuário escolher um estado específico
 
-
 Por fim: Falta o sistema final, aquele que terá um menu que será usado para executar as nossas funções de maneira adequada
 '''
 
