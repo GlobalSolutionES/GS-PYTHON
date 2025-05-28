@@ -28,51 +28,78 @@ def guia():
 
     print("Sua região passou por uma inundação/enchente. APÓS a enchente, você deve:\n1.Beber apenas água filtrada ou fervida;\n2.Não utilizar alimentos que estiveram em contato com a água da inundação;\n3.Ficar atento aos sintomas de doenças, tais como febre, vômito, dor de cabeça ou no corpo (principalmente na “batata da perna”), e diarréia; nesses casos,\nprocure os serviços de saúde;\n4.Chuvas de grande intensidade ou longa duração provocam deslizamentos, principalmente em áreas de risco: fique atento a qualquer sinal;\n5.Não use equipamentos elétricos que tenham sido molhados ou que estiveram em locais inundados, pois há risco de choque elétrico e curto-circuito;\n6.Lave e desinfete os objetos atingidos pela enchente usando uma mistura de um copo de água sanitária para cada balde de 20 litros de água limpa, utilizando luvas e botas.")
 
-    print("1 - Prevenção")
-    print("2 - Antes da Enchente")
-    print("3 - Durante a Enchente")
-    print("4 - No carro")
-    print("5 - após a Enchente")
-    print("0 - Voltar ao menu principal")
+def guia(): # Menu principal da aplicação
+    while True:
+        print("\n-- MENU PRINCIPAL --")
+        print("1 - Ver guia de Sobrevivência")
+        print("2 - Fazer o Quiz")
+        print("3 - Consultar ocorrências por região")
+        print("0 - Sair")
 
-    escolha = input("Escolha a seçãpo que deseja visualizar: ")
+        opcao = input("Escolha uma opção: ")
 
-    if escolha == "1":
-        prevencao()
-    elif escolha == "2":
-        antes()
-    elif escolha == "3":
-        durante()
-    elif escolha == "4":
-        nocarro()
-    elif escolha "5":
-        depois()
-    elif escolha "0":
-        print("Retornando ao menu principal...")
-        return
-    else:
-        print("Opcão inválida. Retornando ao menu principal.")
-        return
+        if opcao == "1":
+            guia()
+        elif opcao == "2":
+        quiz()
+        elif opcao == "3"
+        consulta_regiao()
+        elif opcao == "0":
+            print("Saindo... Até a próxima!")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+def guia(): # Guia principal
+    while True:
+        print("\n-- GUIA DE SOBREVIVÊNCIA --")
+        print("1 - Prevenção")
+        print("2 - Antes da Enchente")
+        print("3 - Durante a Enchente")
+        print("4 - No carro")
+        print("5 - após a Enchente")
+        print("0 - Voltar ao menu principal")
+
+        escolha = input("Escolha a opção que deseja visualizar: ")
+
+        if escolha == "1":
+            prevencao()
+        elif escolha == "2":
+            antes()
+        elif escolha == "3":
+            durante()
+        elif escolha == "4":
+            nocarro()
+        elif escolha == "5":
+            depois()
+        elif escolha == "0":
+            break
+        else:
+            print("Opcão inválida. Tente novamente, por favor.")
 
 def voltarouveroutraopcao():
-    print("\nDeseja: ")
-    print("1 - Ver outra seção do guia")
-    print("0 - Voltar ao menu principal")
+    while True:
+        print("\nDeseja: ")
+        print("1 - Ver outra seção do guia")
+        print("0 - Voltar ao menu principal")
+        escolha = input("Digite sua escolha: ")
+        
+        if escolha == "1":
+            return True
+        elif escolha == "0":
+            return False
+        else:
+            print("Entrada inválida. Tente novamente, por favor.")
 
-    escolha = input("Digite sua escolha: ")
-    
-    if escolha == "1":
-        guia()
-    else:
-        print("Retornando ao menu principal...")
-
+# Funções do guia
 def prevencao():
     print("\n-- PREVENÇÃO --")
     print("1. - Moradores de regiões propensas a inundações devem manter-se informados sobre as condições meteorológicas;")
     print("2. - Evite construir em cima e embaixo de barrancos que possam deslizar, carregando sua casa;")
     print("3. Não jogue lixo ou entulho no córrego, para não obstruir a passagem de água, nem em terrenos baldios ou ruas;")
     print("4. Limpe o telhado, calhas, condutores e canaletas para evitar entupimentos.")
-    voltarouveroutraopcao()
+    if voltarouveroutraopcao():
+        guia()
 
 def antes():
 
@@ -83,7 +110,8 @@ def antes():
     print("4. Desligue aparelhos e feche registros de água e gás;")
     print("5. Retire o lixo e leve animais para locais seguros;")
     print("6. Avise vizinhos e acione Corpo de Bombeiros (193) e Defesa Civil (199).")
-    voltarouveroutraopcao()
+    if voltarouveroutraopcao():
+        guia()
 
 def durante():
 
@@ -94,7 +122,8 @@ def durante():
     print("4. Proteja o corpo com roupas adequadas;")
     print("5. Não deixe crianças brincarem na água;")
     print("6. Só volte para casa após segurança garantida.")
-    voltarouveroutraopcao()
+    if voltarouveroutraopcao():
+        guia()
 
 def nocarro():
     print("\n--- SE ESTIVER NO CARRO ---")
@@ -103,7 +132,8 @@ def nocarro():
     print("3. Escute o rádio para saber o melhor caminho;")
     print("4. Nunca atravesse áreas alagadas;")
     print("5. Se a água estiver subindo, procure abrigo com sua família.")
-    voltarouveroutraopcao()
+    if voltarouveroutraopcao():
+        guia()
 
 def depois():
     print("\n--- APÓS A ENCHENTE ---")
@@ -112,41 +142,47 @@ def depois():
     print("3. Fique atento a sintomas de doenças;")
     print("4. Não use aparelhos que estiveram molhados;")
     print("5. Desinfete objetos com água sanitária (1 copo para 1 balde de 20 litros de água limpa).")
-
+    if voltarouveroutraopcao():
+        guia()
 
 def quiz():
-    print("\n-- QUIZ DE CONHECIMENTO --")
-    pontos = 0
+    print("\n-- QUIZ SOBRE ENCHENTES --")
+    print("Responda com A, B ou C.")
 
-    print("1) O que deve ser feito com documentos importantes?")
-    print("a) Jogar fora")
-    print("b) Guardar em um local alto e protegido com plástico")
-    print("c) Esquecer deles")
-    resposta == input("Resposta: ")
-    if resposta.lower() == "b":
-        pontos += 1
+    # Pergunta 1
+    print("\n1) O que você deve fazer ao perceber que o nível da água está subindo rapidamente?")
+    print("A) Continuar normalmente dentro de casa")
+    print("B) Subir para um local mais alto ou sair da área com segurança")
+    print("C) Aguardar ajuda dentro do carro")
+    resposta1 = input("Sua resposta: ").upper()
+    if resposta1 == "B":
+        print("Correto!")
+    else:
+        print("Resposta incorreta. O ideal é procurar abrigo seguro imediatamente.")
 
-    print("2) O que deve ser evitado durante uma enchente?")
-    print("a) Andar na água da enchente")
-    print("b) Usar bota e luva")
-    print("c) Avisar vizinhos")
-    resposta == input("Resposta: ")
-    if resposta.lower() == "a":
-        pontos += 1
+    # Pergunta 2
+    print("\n2) Qual desses objetos é essencial em um kit de emergência?")
+    print("A) Controle remoto")
+    print("B) Lanterna com pilhas")
+    print("C) Espelho de maquiagem")
+    resposta2 = input("Sua resposta: ").upper()
+    if resposta2 == "B":
+        print("Correto!")
+    else:
+        print("Resposta incorreta. Uma lanterna pode salvar vidas no escuro.")
 
-    print("3) Qual é o número da Defesa Civil?")
-    print("a) 192")
-    print("b) 199")
-    print("c) 190")
-    resposta == input("Resposta: ")
-    if resposta.lower() == "b":
-        pontos += 1
+    # Pergunta 3
+    print("\n3) Por que não é seguro andar em água de enchente?")
+    print("A) Pode sujar as roupas")
+    print("B) A água pode esconder buracos e estar contaminada")
+    print("C) É muito fria")
+    resposta3 = input("Sua resposta: ").upper()
+    if resposta3 == "B":
+        print("Correto!")
+    else:
+        print("Resposta incorreta. A água pode causar acidentes e doenças.")
 
-    print(f"\n Você fez {pontos} ponto(s) de 3.")
-    input("Pressione Enter para entrar no menu...")
-    menu()
-
-def consulta_regiao():
+def consulta_regiao(): #Consulta região
     print("\n-- CONSULTA DE ENCHENTES POR REGIÃO --")
     print("1 - Sudeste")
     print("2 - Nordeste")
@@ -210,6 +246,9 @@ def consulta_estado_sudeste():
         print("Opção inválida.")
         consulta_estado_sudeste()
 
+    input("\nPressione Enter para voltar ao menu de regiões...")
+    consulta_regiao()
+
 def consulta_estado_nordeste():
 
     print("1 - BA")
@@ -227,6 +266,9 @@ def consulta_estado_nordeste():
 
     elif escolha == "3":
         print("CE: 5% das ocorrências.")
+
+    input("\nPressione Enter para voltar ao menu de regiões...")
+    consulta_regiao()
 
 def consulta_estado_sul():
 
@@ -246,6 +288,9 @@ def consulta_estado_sul():
     elif escolha == "3":
         print("PR: 3% das ocorrências.")
 
+    input("\nPressione Enter para voltar ao menu de regiões...")
+    consulta_regiao()
+
 def consulta_estado_norte():
     print("1 - PA")
     print("2 - AM")
@@ -262,6 +307,9 @@ def consulta_estado_norte():
 
     elif escolha == "3":
         print("RO: 3% das ocorrências.")
+
+    input("\nPressione Enter para voltar ao menu de regiões...")
+    consulta_regiao()
 
 def consulta_estado_centrooeste():
     print("1 - DF")
@@ -280,7 +328,10 @@ def consulta_estado_centrooeste():
     elif escolha == "3":
         print("MT: 2% das ocorrências.")
 
-def menu():
+    input("\nPressione Enter para voltar ao menu de regiões...")
+    consulta_regiao()
+
+def guia():
     while True:
         print("\n=== MENU PRINCIPAL ===")
         print("1 - Ver Guia de Sobrevivência")
@@ -307,7 +358,7 @@ def menu():
             print("Opção inválida. Tente novamente.")
 
 # Iniciar o sistema
-menu()
+guia()
  
 
 
