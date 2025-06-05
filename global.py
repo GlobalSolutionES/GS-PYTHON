@@ -1,3 +1,9 @@
+'''
+Geovana Maria da Silva Cardoso - 566254
+Mariana Silva do Egito Moreira - 562544
+1ESPF - Equipe HydroSafe
+'''
+
 #Guia de Sobrevivência
 #Função para que o usuário seja informado do que fazer para Prevenir uma enchente ou de como proceder quando
 # estiver em uma situação ANTES, DURANTE, (durante) DENTRO DO CARRO ou APÓS uma enchente
@@ -282,7 +288,7 @@ def registrar_enchente():
 #Ele repetirá (será executado) até que o usuário insira 0
 def menu(): 
     while True:
-        print("\n-- MENU PRINCIPAL --")
+        print("\n-- MENU PRINCIPAL - HYDROSAFE --")
         print("1 - Guia de Sobrevivência para Enchentes")
         print("2 - Quiz: Você sobreviveria a uma inundação?")
         print("3 - Consultar ocorrências de enchentes por região")
