@@ -35,23 +35,6 @@ def guiasobre():
             print("Opcão inválida. Tente novamente, por favor.")
 
 
-#Função feita para que o usuário tenha a opção de ver outra seção do Guia de sobrevivência ou sair dessa função e voltar 
-#ao Menu principal
-def voltarVerOpcao():
-    while True:
-        print("\nDeseja: ")
-        print("1 - Ver outra seção do guia")
-        print("0 - Voltar ao menu principal")
-        escolha = input("Digite sua escolha: ")
-            
-        if escolha == "1":
-            return True
-        elif escolha == "0":
-            return False
-        else:
-            print("Entrada inválida. Tente novamente, por favor.")
-
-
 #Funções do Guia de Sobrevivência
 #Possuem instruções do que fazer em cada situação envolvendo Enchentes.
 
@@ -62,9 +45,8 @@ def prevencao():
     print("2. Evite construir em cima e embaixo de barrancos que possam deslizar, carregando sua casa;")
     print("3. Não jogue lixo ou entulho no córrego, para não obstruir a passagem de água, nem em terrenos baldios ou ruas;")
     print("4. Limpe o telhado, calhas, condutores e canaletas para evitar entupimentos.")
-    print("\n")
-    if voltarVerOpcao(): #A função será executada, se o usuário inserir 1 (função verdadeira), executará o Guia novamente
-        guiasobre()
+    input("Pressione Enter para voltar ao guia...")
+    
 
 #Para ensinar ações fundamentais que reduzem danos e protegem vidas e bens materiais antes da enchente começar.
 def antes():
@@ -77,9 +59,7 @@ def antes():
     print("6. Retire todo o lixo e leve-o para áreas não sujeitas a inundações;")
     print("7. Retire os animais de estimação de casa;")
     print("8. Seja solidário: avise seus vizinhos sobre o perigo, no caso de casas construídas em áreas de risco de deslizamentos; avise também, imediatamente,o Corpo de Bombeiros (193) e à Defesa Civil (199);")
-    print("\n")
-    if voltarVerOpcao():
-        guiasobre()
+    input("Pressione Enter para voltar ao guia...")
     
 #Para ajudar a evitar acidentes, doenças e perda de vidas no momento mais crítico do desastre.    
 def durante():
@@ -93,9 +73,7 @@ def durante():
     print("7. Antes de tudo, salve e proteja vidas. Se precisar retirar algo de sua casa, após a inundação, peça ajuda à \nDefesa Civil (199) ou ao Corpo de Bombeiros (193);")
     print("8. Tente convencer as pessoas que moram em áreas de risco a saírem de casa durante as chuvas;")
     print("9. Evite voltar para casa até as águas baixarem e o caminho estar seguro.Só entre na água se for absolutamente necessário, usando botas de borracha.")
-    print("\n")
-    if voltarVerOpcao():
-        guiasobre()
+    input("Pressione Enter para voltar ao guia...")
     
 #Para ensinar como agir se for pego de surpresa dentro do carro, o que é uma situação comum e perigosa.
 def nocarro():
@@ -105,9 +83,7 @@ def nocarro():
     print("3. Escute o rádio para saber o melhor caminho;")
     print("4. Nunca atravesse áreas alagadas, caso não for possível, procure dirigir devagar, mantendo o carro acelerado;")
     print("5. Se a água estiver subindo, procure abrigo com sua família.")
-    print("\n")
-    if voltarVerOpcao():
-       guiasobre()
+    input("Pressione Enter para voltar ao guia...")
    
 #Para garantir que as pessoas saibam como agir após o desastre, prevenindo doenças e novos riscos.  
 def depois():
@@ -118,9 +94,7 @@ def depois():
     print("4. Não use aparelhos elétricos que estiveram molhados;")
     print("5. Desinfete objetos com água sanitária (1 copo para 1 balde de 20 litros de água limpa) utilizando luvas e botas;")
     print("6. Chuvas de grande intensidade ou longa duração provocam deslizamentos, principalmente em áreas de risco: fique atento a qualquer sinal;")
-    print("\n")
-    if voltarVerOpcao():
-       guiasobre()
+    input("Pressione Enter para voltar ao guia...")
    
 
 
