@@ -38,17 +38,18 @@ def guiasobre():
 #Função feita para que o usuário tenha a opção de ver outra seção do Guia de sobrevivência ou sair dessa função e voltar 
 #ao Menu principal
 def voltarVerOpcao():
-    print("\nDeseja: ")
-    print("1 - Ver outra seção do guia")
-    print("0 - Voltar ao menu principal")
-    escolha = input("Digite sua escolha: ")
-        
-    if escolha == "1":
-        return True
-    elif escolha == "0":
-        return False
-    else:
-        print("Entrada inválida. Tente novamente, por favor.")
+    while True:
+        print("\nDeseja: ")
+        print("1 - Ver outra seção do guia")
+        print("0 - Voltar ao menu principal")
+        escolha = input("Digite sua escolha: ")
+            
+        if escolha == "1":
+            return True
+        elif escolha == "0":
+            return False
+        else:
+            print("Entrada inválida. Tente novamente, por favor.")
 
 
 #Funções do Guia de Sobrevivência
@@ -113,7 +114,7 @@ def depois():
     print("\n--- APÓS A ENCHENTE ---")
     print("1. Beba apenas água filtrada ou fervida;")
     print("2. Não consuma alimentos que tiveram contato com a água;")
-    print("3. Fique atento a sintomas de doenças, tais como febre, vômito, dor de cabeça ou no corpo (principalmente na “batata da perna”), e diarréia; nesses casos,\nprocure os serviços de saúde;")
+    print("3. Fique atento a sintomas de doenças, tais como febre, vômito, dor de cabeça ou no corpo (principalmente na “batata da perna”), e diarreia; nesses casos,\nprocure os serviços de saúde;")
     print("4. Não use aparelhos elétricos que estiveram molhados;")
     print("5. Desinfete objetos com água sanitária (1 copo para 1 balde de 20 litros de água limpa) utilizando luvas e botas;")
     print("6. Chuvas de grande intensidade ou longa duração provocam deslizamentos, principalmente em áreas de risco: fique atento a qualquer sinal;")
@@ -206,9 +207,6 @@ def quiz():
 
 #Função para consultar a porcentagem de risco de desastres causados #por chuva em cada região 
 #Para aumentar a consciência do risco por região, ajudando na preparação e prevenção.
-def consulta_regiao():  
-    while True:
-        print("\n-- CONSULTA DE RISCO DE ENCHENTES POR REGIÃO --")
 def consulta_regiao():  
     while True:
         print("\n-- CONSULTA DE RISCO DE ENCHENTES POR REGIÃO --")
